@@ -1,0 +1,36 @@
+ class:
+      class_name: 友情链接
+      link_list:
+        1:
+          name: Lorem Picsum
+          link: https://picsum.photos/
+          avatar: https://i.picsum.photos/id/314/200/300.jpg
+          descr: 就是个用来做随机图片的网站，访问有点小慢
+
+        2:
+          name: 24小时临时邮箱
+          link: http://24mail.chacuo.net/
+          avatar: https://i.picsum.photos/id/315/200/300.jpg
+          descr: 邮箱持续24小时，比十分钟邮箱（10分钟)保持时间更长，可以任意设置邮箱名，随时更换邮箱。    
+
+        3:
+          name: MD5在线加密解密
+          link: https://www.cmd5.com/
+          avatar: https://i.picsum.photos/id/316/200/300.jpg
+          descr: md5神奇宝贝
+              
+
+
+
+
+ class2:
+       class_name: 无效链接
+       link_list:
+         1:
+           name: 梦xxx
+           link: https://blog.xxx.com
+           avatar: https://xxxx/avatar.png
+           descr: xxxx
+
+
+
