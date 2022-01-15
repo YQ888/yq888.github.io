@@ -1,0 +1,310 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>小余博客 | 小余博客</title><meta name="keywords" content="blog"><meta name="author" content="小余"><meta name="copyright" content="小余"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="作者：余小小 日期：2021-10-17  下载VMware15 下载链接: https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1tfH9peAhT2oh_hMX3MKteA 提取码: 3c8t 注册码： https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1LeriLLOuIpb0CE-lOUKQOQ 提取码: x5o4  下载镜像这里使用网易镜像库下载  网易开源镜像站http:&#x2F;&#x2F;mirror">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小余博客">
+<meta property="og:url" content="http://gh.yxqz.top/2022/01/15/2.%E5%AE%89%E8%A3%85Centos7/index.html">
+<meta property="og:site_name" content="小余博客">
+<meta property="og:description" content="作者：余小小 日期：2021-10-17  下载VMware15 下载链接: https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1tfH9peAhT2oh_hMX3MKteA 提取码: 3c8t 注册码： https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1LeriLLOuIpb0CE-lOUKQOQ 提取码: x5o4  下载镜像这里使用网易镜像库下载  网易开源镜像站http:&#x2F;&#x2F;mirror">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2022-01-15T14:06:05.723Z">
+<meta property="article:modified_time" content="2022-01-15T08:14:10.631Z">
+<meta property="article:author" content="小余">
+<meta property="article:tag" content="blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://gh.yxqz.top/2022/01/15/2.%E5%AE%89%E8%A3%85Centos7/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '小余博客',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-01-15 16:14:10'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a></div></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">小余博客</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">无题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-01-15T14:06:05.723Z" title="发表于 2022-01-15 22:06:05">2022-01-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-01-15T08:14:10.631Z" title="更新于 2022-01-15 16:14:10">2022-01-15</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><img src="http://p2.qhimg.com/bdr/__85/t01c6d7bfc65bac7d33.jpg"></p>
+<blockquote>
+<p>作者：余小小</p>
+<p>日期：2021-10-17</p>
+</blockquote>
+<h1 id="下载VMware15"><a href="#下载VMware15" class="headerlink" title="下载VMware15"></a>下载VMware15</h1><blockquote>
+<p>下载链接: <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1tfH9peAhT2oh_hMX3MKteA">https://pan.baidu.com/s/1tfH9peAhT2oh_hMX3MKteA</a> 提取码: 3c8t</p>
+<p>注册码： <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1LeriLLOuIpb0CE-lOUKQOQ">https://pan.baidu.com/s/1LeriLLOuIpb0CE-lOUKQOQ</a> 提取码: x5o4</p>
+</blockquote>
+<h1 id="下载镜像"><a href="#下载镜像" class="headerlink" title="下载镜像"></a>下载镜像</h1><p>这里使用网易镜像库下载</p>
+<blockquote>
+<p><strong>网易开源镜像站</strong><a target="_blank" rel="noopener" href="http://mirrors.163.com/">http://mirrors.163.com/</a></p>
+<p><strong>网易Centos下载</strong><a target="_blank" rel="noopener" href="http://mirrors.163.com/centos/7.7.1908/isos/x86_64/">http://mirrors.163.com/centos/7.7.1908/isos/x86_64/</a></p>
+</blockquote>
+<p><img src="https://pic.downk.cc/item/5e859d3c504f4bcb04dff5cf.png"></p>
+<h1 id="安装Centos系统（基础设施）"><a href="#安装Centos系统（基础设施）" class="headerlink" title="安装Centos系统（基础设施）"></a>安装Centos系统（基础设施）</h1><h2 id="创建虚拟机"><a href="#创建虚拟机" class="headerlink" title="创建虚拟机"></a>创建虚拟机</h2><p><img src="https://pic.downk.cc/item/5e859f68504f4bcb04e1911b.png"></p>
+<p><img src="https://pic.downk.cc/item/5e859f7f504f4bcb04e1a238.png"></p>
+<p><strong>如果你还没有镜像，可以稍后选择</strong></p>
+<p><img src="https://pic.downk.cc/item/5e859f8c504f4bcb04e1ad14.png"></p>
+<p><img src="https://pic.downk.cc/item/5e859fc5504f4bcb04e1d5c2.png"></p>
+<h2 id="开始安装Centos系统并配置静态ip"><a href="#开始安装Centos系统并配置静态ip" class="headerlink" title="开始安装Centos系统并配置静态ip"></a>开始安装Centos系统并配置静态ip</h2><p>选择第一个，安装Centos</p>
+<p><img src="https://pic.downk.cc/item/5e859fde504f4bcb04e1e4b7.png"></p>
+<h2 id="选择安装语言"><a href="#选择安装语言" class="headerlink" title="选择安装语言"></a>选择安装语言</h2><p>选中安装的时候所用的语言这里<strong>直接拉在最下面点击中文</strong></p>
+<p><img src="https://pic.downk.cc/item/5e85a01d504f4bcb04e21281.png"></p>
+<p>开始安装</p>
+<p><img src="https://pic.downk.cc/item/5e85a050504f4bcb04e2366f.png"></p>
+<p>选择安装的硬盘，这点击一下就是了。然后再点击完成就好</p>
+<p><img src="https://pic.downk.cc/item/5e85a069504f4bcb04e248ae.png"></p>
+<p><img src="https://pic.downk.cc/item/5e85a090504f4bcb04e2674f.png"></p>
+<h2 id="配置软件选择"><a href="#配置软件选择" class="headerlink" title="配置软件选择"></a>配置软件选择</h2><p><img src="https://pic.downk.cc/item/5e8d8aac504f4bcb0418219e.png"></p>
+<p><img src="https://pic.downk.cc/item/5e8d8afb504f4bcb04187547.png"></p>
+<h2 id="配置网络，设置静态ip（重要）"><a href="#配置网络，设置静态ip（重要）" class="headerlink" title="配置网络，设置静态ip（重要）"></a>配置网络，设置静态ip（重要）</h2><p><img src="https://pic.downk.cc/item/5e8d8b60504f4bcb0418e17a.png"></p>
+<p><img src="https://pic.downk.cc/item/5e8d8c3d504f4bcb0419ccb9.png"></p>
+<p>地址需要注意是配置的网段中的起始地址。</p>
+<p>子网掩码和vm的配置一样。</p>
+<p>网关和vm的配置一样</p>
+<p>dns可以和网关一样</p>
+<p><img src="https://pic.downk.cc/item/5e8d8e2f504f4bcb041bd0b7.png"></p>
+<p><img src="https://pic.downk.cc/item/5e8d8e49504f4bcb041bea01.png"></p>
+<p><img src="https://pic.downk.cc/item/5e8d8e58504f4bcb041bf96f.png"></p>
+<p><img src="https://pic.downk.cc/item/5e8d8e9d504f4bcb041c4578.png"></p>
+<p><strong>这里一般第一次配置都需要管理员权限，看看右下角</strong></p>
+<p><img src="https://pic.downk.cc/item/5e8d8eb3504f4bcb041c59de.png"></p>
+<p><img src="https://pic.downk.cc/item/5e8d8f1f504f4bcb041ccc32.png"></p>
+<p><img src="https://pic.downk.cc/item/5e8d8f0c504f4bcb041cb9e9.png"></p>
+<p><img src="https://pic.downk.cc/item/5e8d8f2f504f4bcb041cdd98.png"></p>
+<p><img src="https://pic.downk.cc/item/5e8d8f3b504f4bcb041ce928.png"></p>
+<p><img src="https://pic.downk.cc/item/5e8d8f45504f4bcb041cf549.png"></p>
+<p><img src="https://pic.downk.cc/item/5e8fe550504f4bcb042e76a4.png"></p>
+<h2 id="设置root密码密码"><a href="#设置root密码密码" class="headerlink" title="设置root密码密码"></a>设置root密码密码</h2><p>设置root密码    <strong>设置简单点</strong></p>
+<p><img src="https://pic.downk.cc/item/5e85a0f1504f4bcb04e2a997.png"></p>
+<p>然后等待几分钟就好了</p>
+<p><img src="https://pic.downk.cc/item/5e85a149504f4bcb04e2e50a.png"></p>
+<h2 id="登录Centos"><a href="#登录Centos" class="headerlink" title="登录Centos"></a>登录Centos</h2><ul>
+<li><strong>这里注意，密码是不显示的，</strong></li>
+<li><strong>默认开机数字键盘锁是开了的，</strong></li>
+<li><strong>设置的是英文密码就直接输入</strong></li>
+<li><strong>需要打开你键盘的数字锁直接输入你之前设置的root密码然后回车</strong></li>
+</ul>
+<p><img src="https://pic.downk.cc/item/5e85a19a504f4bcb04e32361.png"></p>
+<p><img src="https://pic.downk.cc/item/5e85a236504f4bcb04e394ae.png"></p>
+<h1 id="安装Centos系统（GNOME桌面）"><a href="#安装Centos系统（GNOME桌面）" class="headerlink" title="安装Centos系统（GNOME桌面）"></a>安装Centos系统（GNOME桌面）</h1><h1 id="启动Centos"><a href="#启动Centos" class="headerlink" title="启动Centos"></a>启动Centos</h1><p><img src="https://i.loli.net/2021/10/16/JD9SGEUTBx4PnVw.png" alt="image-20211016120409454"></p>
+<h1 id="接受许可证"><a href="#接受许可证" class="headerlink" title="接受许可证"></a>接受许可证</h1><p><img src="https://i.loli.net/2021/10/16/UVNHwJ1x5c7j3ri.png" alt="image-20211016120454640"></p>
+<p>点击进入，勾选即可</p>
+<p><img src="https://i.loli.net/2021/10/16/fcTuDswXzU73BEp.png" alt="image-20211016120517314"></p>
+<p>完成配置</p>
+<p><img src="https://i.loli.net/2021/10/16/mDi2FkLfs9quChd.png" alt="image-20211016120532087"></p>
+<h1 id="键盘选择英语"><a href="#键盘选择英语" class="headerlink" title="键盘选择英语"></a>键盘选择英语</h1><p><img src="https://i.loli.net/2021/10/16/geUiDIhoAJvdStF.png" alt="image-20211016120634392"></p>
+<h1 id="关闭位置"><a href="#关闭位置" class="headerlink" title="关闭位置"></a>关闭位置</h1><p><img src="https://i.loli.net/2021/10/16/5iUHdyaOKqkcZzN.png" alt="image-20211016120656633"></p>
+<h1 id="确定时区"><a href="#确定时区" class="headerlink" title="确定时区"></a>确定时区</h1><p>上海</p>
+<p><img src="https://i.loli.net/2021/10/16/6V12yZAdIt3RiTP.png" alt="image-20211016120720795"></p>
+<h1 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h1><p>非root用户</p>
+<p><img src="https://i.loli.net/2021/10/16/abrP67jWLKoti9R.png" alt="image-20211016120756109"></p>
+<h1 id="设置用户密码"><a href="#设置用户密码" class="headerlink" title="设置用户密码"></a>设置用户密码</h1><p>设置长一点，英语和数字就可以了</p>
+<h1 id="设置静态ip"><a href="#设置静态ip" class="headerlink" title="设置静态ip"></a>设置静态ip</h1><h2 id="物理机配置"><a href="#物理机配置" class="headerlink" title="物理机配置"></a>物理机配置</h2><p>在物理机中查看vm8网络驱动是否启用</p>
+<p><img src="https://i.loli.net/2021/10/16/qEKnZW6FNfakMy2.png" alt="image-20211016121223116"></p>
+<h2 id="虚拟机配置"><a href="#虚拟机配置" class="headerlink" title="虚拟机配置"></a>虚拟机配置</h2><p>在vm虚拟中点击编辑，找到虚拟网络编辑器</p>
+<p><img src="https://i.loli.net/2021/10/16/7zp6QrjX98qmfOw.png" alt="image-20211016121302915"></p>
+<p>点击nat模式，点击更改设置</p>
+<p><img src="https://i.loli.net/2021/10/16/HBi5VDrwX62usAY.png" alt="image-20211016121353705"></p>
+<p>再次打开虚拟网络编辑器，找到VM8虚拟网卡，修改子网ip，需要按照规则设置</p>
+<p><img src="https://i.loli.net/2021/10/16/pHWJB31vAN2ZfMn.png" alt="image-20211016121454349"></p>
+<p>设置网关</p>
+<p><img src="https://i.loli.net/2021/10/16/PCya1GIucF6dD5e.png" alt="image-20211016121532015"></p>
+<p>网关设置最好和子网前面三位保证一致，不能和子网ip一样</p>
+<p><img src="https://i.loli.net/2021/10/16/3SUBiFYOpL7nZlJ.png" alt="image-20211016121624363"></p>
+<p>应用配置和确定</p>
+<p><img src="https://i.loli.net/2021/10/16/7JZt9dz6Vv5KGli.png" alt="image-20211016121651768"></p>
+<h2 id="centos配置"><a href="#centos配置" class="headerlink" title="centos配置"></a>centos配置</h2><p>打开终端，桌面鼠标右键即可</p>
+<p><img src="https://i.loli.net/2021/10/16/37ZLzuUvJtOeaGg.png" alt="image-20211016121751681"></p>
+<p>切换到root用户 <code>su root</code>输入的密码是root的密码，不是当前用户的密码</p>
+<p><img src="https://i.loli.net/2021/10/16/lUhVr5cqy38ZvK1.png" alt="image-20211016121840847"></p>
+<p>修改网卡配置文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/sysconfig/network-scripts/ifcfg-ens33</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/10/16/DFxEhpvGi5adI46.png" alt="image-20211016122031783"></p>
+<p>按键盘i，进入insert模式，使用键盘的删除键，删除文件的所有信息，将下面的配置好的信息复制粘贴即可</p>
+<blockquote>
+<p>这里ipaddr和网关是当前我的虚拟机的配置如果和你的不一样，要修改</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">TYPE=Ethernet</span><br><span class="line">PROXY_METHOD=none</span><br><span class="line">BROWSER_ONLY=no</span><br><span class="line">BOOTPROTO=static</span><br><span class="line">IPADDR=192.168.22.129</span><br><span class="line">NETMASK=255.255.255.0</span><br><span class="line">GATEWAY=192.168.22.2</span><br><span class="line">DEFROUTE=yes</span><br><span class="line">IPV4_FAILURE_FATAL=no</span><br><span class="line">IPV6INIT=yes</span><br><span class="line">IPV6_AUTOCONF=yes</span><br><span class="line">IPV6_DEFROUTE=yes</span><br><span class="line">IPV6_FAILURE_FATAL=no</span><br><span class="line">IPV6_ADDR_GEN_MODE=stable-privacy</span><br><span class="line">NAME=ens33</span><br><span class="line">UUID=c8aeadda-14c4-435d-ad17-4fec0f0b295f</span><br><span class="line">DEVICE=ens33</span><br><span class="line">ONBOOT=true</span><br></pre></td></tr></table></figure>
+
+<p>注意：</p>
+<blockquote>
+<p>IPADDR=192.168.22.129 不能配置成192.168.22.1，否则会出问题，末位最好不要配置1,2,3这种常见的。否则后面端口无法解析</p>
+</blockquote>
+<p>鼠标右键，粘贴就行了</p>
+<p><img src="https://i.loli.net/2021/10/16/32TZGOHkBYh1evC.png" alt="image-20211016122259129"></p>
+<p>保存文件，键盘按esc退出键，输入冒号：和wq，回车即可</p>
+<p><img src="https://i.loli.net/2021/10/16/DeOQ1g8ZzPR7CUI.png" alt="image-20211016122412387">（我这里的ipaddr是配置的错误的哦，无法解析，不要按照图中的操作来)</p>
+<p>重启网卡</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart network</span><br></pre></td></tr></table></figure>
+
+<p>查看当前的ip</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig -a</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/10/16/8nxNhJRif7eGgcs.png" alt="image-20211016122706222"></p>
+<p>测试是否能和物理机通信，在物理机的cmd中用ping的方式来测试(局域网通信)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping 192.168.22.1我这里是ping的dns，请测试ip</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/10/16/bfpRGu8xqlMswEA.png" alt="image-20211016122827794"></p>
+<p>访问公网配置，给当前的虚拟机再添加一个网卡，点击虚拟机，点击设置</p>
+<p><img src="https://i.loli.net/2021/10/16/MFI1hiNXYEuAgTf.png" alt="image-20211016123126177"></p>
+<p>添加硬件信息</p>
+<p><img src="https://i.loli.net/2021/10/16/u9DSN4loP6jYWfQ.png" alt="image-20211016123201232"></p>
+<p>添加网络适配器</p>
+<p><img src="https://i.loli.net/2021/10/16/f8tv6rMTOIciCgo.png" alt="image-20211016123216875"></p>
+<p>给新添加的网卡设置nat模式</p>
+<p><img src="https://i.loli.net/2021/10/16/IxcmJZGhkVzrSF9.png" alt="image-20211016123735407"></p>
+<p>在centos中拼一下百度</p>
+<p><img src="https://i.loli.net/2021/10/16/3im96FAhuaVNdzg.png" alt="image-20211016123831622"></p>
+<h1 id="时间同步"><a href="#时间同步" class="headerlink" title="时间同步"></a>时间同步</h1><p>同步物理机的时间</p>
+<p>在vm上面的菜单栏选中虚拟机，选中设置</p>
+<p><img src="https://i.loli.net/2021/10/16/IJrcG3k4w79PQNi.png" alt="image-20211016152207971"></p>
+<p>在选项中找到vmtools的事件同步打开</p>
+<p><img src="https://i.loli.net/2021/10/16/j9LghnD5MlwQbeC.png" alt="image-20211016152241841"></p>
+<h1 id="系统备份"><a href="#系统备份" class="headerlink" title="系统备份"></a>系统备份</h1><h2 id="虚拟机克隆系统"><a href="#虚拟机克隆系统" class="headerlink" title="虚拟机克隆系统"></a>虚拟机克隆系统</h2><p>可以完全的拷贝整个系统</p>
+<blockquote>
+<p><strong>使用之前，需要关闭要克隆的虚拟机</strong></p>
+</blockquote>
+<p>在vm中，选中需要克隆的虚拟机，鼠标右键，选中管理，点击管理中的克隆即可</p>
+<p><img src="https://i.loli.net/2021/10/16/ANroZuBdhxU2cF3.png" alt="image-20211016152602596"></p>
+<p>选中第一个，当前的状态：</p>
+<p><img src="https://i.loli.net/2021/10/16/wejUxQOM1osl7aA.png" alt="image-20211016152645479"></p>
+<p>克隆完整的系统</p>
+<p><img src="https://i.loli.net/2021/10/16/coYijm1Q97KykzS.png" alt="image-20211016152703736"></p>
+<p>选定位置和自定义克隆虚拟机的名称。</p>
+<blockquote>
+<p>克隆时间有点长</p>
+</blockquote>
+<h2 id="制作系统的快照"><a href="#制作系统的快照" class="headerlink" title="制作系统的快照"></a>制作系统的快照</h2><p>原系统拍了一张照片，以前的系统没有了，那么新的快照也是无法使用的了，快照不是完整的系统。</p>
+<p>制作快照，当前的虚拟机也要在关机状态</p>
+<ul>
+<li>占用空间小</li>
+<li>原系统不存在了，快照就不能使用了</li>
+</ul>
+<p>在目标虚拟机中右键操作就可以了。</p>
+<p><img src="https://i.loli.net/2021/10/16/1HQRi8CW3ncueNI.png" alt="image-20211016154309814"></p>
+<p>恢复快照，同样的方式，选中快照管理器，点击相关的快照即可</p>
+<p><img src="https://i.loli.net/2021/10/16/K1TtU5oMzpGCfLD.png" alt="image-20211016154436488"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">小余</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://gh.yxqz.top/2022/01/15/2.%E5%AE%89%E8%A3%85Centos7/">http://gh.yxqz.top/2022/01/15/2.%E5%AE%89%E8%A3%85Centos7/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://gh.yxqz.top" target="_blank">小余博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/01/15/3.%E4%BD%BF%E7%94%A8xshell%E8%BF%9E%E6%8E%A5%E8%99%9A%E6%8B%9F%E6%9C%BA/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info"></div></div></a></div><div class="next-post pull-right"><a href="/2022/01/15/1.Vmware%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%AE%80%E4%BB%8B%E5%92%8C%E5%AE%89%E8%A3%85/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info"></div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">小余</div><div class="author-info__description">我爱吃鱼香茄子</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BDVMware15"><span class="toc-number">1.</span> <span class="toc-text">下载VMware15</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E9%95%9C%E5%83%8F"><span class="toc-number">2.</span> <span class="toc-text">下载镜像</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Centos%E7%B3%BB%E7%BB%9F%EF%BC%88%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">安装Centos系统（基础设施）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="toc-number">3.1.</span> <span class="toc-text">创建虚拟机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85Centos%E7%B3%BB%E7%BB%9F%E5%B9%B6%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81ip"><span class="toc-number">3.2.</span> <span class="toc-text">开始安装Centos系统并配置静态ip</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%AE%89%E8%A3%85%E8%AF%AD%E8%A8%80"><span class="toc-number">3.3.</span> <span class="toc-text">选择安装语言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6%E9%80%89%E6%8B%A9"><span class="toc-number">3.4.</span> <span class="toc-text">配置软件选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E7%BD%91%E7%BB%9C%EF%BC%8C%E8%AE%BE%E7%BD%AE%E9%9D%99%E6%80%81ip%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89"><span class="toc-number">3.5.</span> <span class="toc-text">配置网络，设置静态ip（重要）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AEroot%E5%AF%86%E7%A0%81%E5%AF%86%E7%A0%81"><span class="toc-number">3.6.</span> <span class="toc-text">设置root密码密码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%99%BB%E5%BD%95Centos"><span class="toc-number">3.7.</span> <span class="toc-text">登录Centos</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Centos%E7%B3%BB%E7%BB%9F%EF%BC%88GNOME%E6%A1%8C%E9%9D%A2%EF%BC%89"><span class="toc-number">4.</span> <span class="toc-text">安装Centos系统（GNOME桌面）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8Centos"><span class="toc-number">5.</span> <span class="toc-text">启动Centos</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%A5%E5%8F%97%E8%AE%B8%E5%8F%AF%E8%AF%81"><span class="toc-number">6.</span> <span class="toc-text">接受许可证</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%94%AE%E7%9B%98%E9%80%89%E6%8B%A9%E8%8B%B1%E8%AF%AD"><span class="toc-number">7.</span> <span class="toc-text">键盘选择英语</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E9%97%AD%E4%BD%8D%E7%BD%AE"><span class="toc-number">8.</span> <span class="toc-text">关闭位置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A1%AE%E5%AE%9A%E6%97%B6%E5%8C%BA"><span class="toc-number">9.</span> <span class="toc-text">确定时区</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7"><span class="toc-number">10.</span> <span class="toc-text">创建用户</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81"><span class="toc-number">11.</span> <span class="toc-text">设置用户密码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E9%9D%99%E6%80%81ip"><span class="toc-number">12.</span> <span class="toc-text">设置静态ip</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%A9%E7%90%86%E6%9C%BA%E9%85%8D%E7%BD%AE"><span class="toc-number">12.1.</span> <span class="toc-text">物理机配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%85%8D%E7%BD%AE"><span class="toc-number">12.2.</span> <span class="toc-text">虚拟机配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#centos%E9%85%8D%E7%BD%AE"><span class="toc-number">12.3.</span> <span class="toc-text">centos配置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5"><span class="toc-number">13.</span> <span class="toc-text">时间同步</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%A4%87%E4%BB%BD"><span class="toc-number">14.</span> <span class="toc-text">系统备份</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%85%8B%E9%9A%86%E7%B3%BB%E7%BB%9F"><span class="toc-number">14.1.</span> <span class="toc-text">虚拟机克隆系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%B6%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BF%AB%E7%85%A7"><span class="toc-number">14.2.</span> <span class="toc-text">制作系统的快照</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/01/15/9.shell/" title="无题"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2022/01/15/9.shell/" title="无题">无题</a><time datetime="2022-01-15T14:06:05.754Z" title="发表于 2022-01-15 22:06:05">2022-01-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/15/8.%E7%BD%91%E7%BB%9C%E5%92%8C%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86/" title="无题"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2022/01/15/8.%E7%BD%91%E7%BB%9C%E5%92%8C%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86/" title="无题">无题</a><time datetime="2022-01-15T14:06:05.749Z" title="发表于 2022-01-15 22:06:05">2022-01-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/15/7.%E5%A4%87%E4%BB%BD%E5%8E%8B%E7%BC%A9/" title="无题"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2022/01/15/7.%E5%A4%87%E4%BB%BD%E5%8E%8B%E7%BC%A9/" title="无题">无题</a><time datetime="2022-01-15T14:06:05.744Z" title="发表于 2022-01-15 22:06:05">2022-01-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/15/6.%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/" title="无题"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2022/01/15/6.%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/" title="无题">无题</a><time datetime="2022-01-15T14:06:05.740Z" title="发表于 2022-01-15 22:06:05">2022-01-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/15/5.%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86/" title="无题"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2022/01/15/5.%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86/" title="无题">无题</a><time datetime="2022-01-15T14:06:05.736Z" title="发表于 2022-01-15 22:06:05">2022-01-15</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 小余</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

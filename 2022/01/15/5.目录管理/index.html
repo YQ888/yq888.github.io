@@ -1,0 +1,366 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>小余博客 | 小余博客</title><meta name="keywords" content="blog"><meta name="author" content="小余"><meta name="copyright" content="小余"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="作者：余小小 日期：2021-10-17  目录常用的命令 ls：列出列表 ll：相当于ls -l; cd：切换目录 pwd：显示当前目录 touch：创建文件 mkdir：创建新的 目录 rmdir：删除空的目录 cp：复制文件或目录 rm：删除文件或者目录 mv：移动文件目录，或者修改文件或者目录的名字 cd .. ：回退上级目录  lsls：列出列表  ls –help:查看可用参数选项">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小余博客">
+<meta property="og:url" content="http://gh.yxqz.top/2022/01/15/5.%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86/index.html">
+<meta property="og:site_name" content="小余博客">
+<meta property="og:description" content="作者：余小小 日期：2021-10-17  目录常用的命令 ls：列出列表 ll：相当于ls -l; cd：切换目录 pwd：显示当前目录 touch：创建文件 mkdir：创建新的 目录 rmdir：删除空的目录 cp：复制文件或目录 rm：删除文件或者目录 mv：移动文件目录，或者修改文件或者目录的名字 cd .. ：回退上级目录  lsls：列出列表  ls –help:查看可用参数选项">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2022-01-15T14:06:05.736Z">
+<meta property="article:modified_time" content="2021-10-17T13:05:04.265Z">
+<meta property="article:author" content="小余">
+<meta property="article:tag" content="blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://gh.yxqz.top/2022/01/15/5.%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '小余博客',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-10-17 21:05:04'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a></div></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">小余博客</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">无题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-01-15T14:06:05.736Z" title="发表于 2022-01-15 22:06:05">2022-01-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-10-17T13:05:04.265Z" title="更新于 2021-10-17 21:05:04">2021-10-17</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><img src="http://p3.qhimg.com/bdr/__85/t0110db87064948cb18.jpg"></p>
+<blockquote>
+<p>作者：余小小</p>
+<p>日期：2021-10-17</p>
+</blockquote>
+<h1 id="目录常用的命令"><a href="#目录常用的命令" class="headerlink" title="目录常用的命令"></a>目录常用的命令</h1><ul>
+<li>ls：列出列表</li>
+<li>ll：相当于ls -l;</li>
+<li>cd：切换目录</li>
+<li>pwd：显示当前目录</li>
+<li>touch：创建文件</li>
+<li>mkdir：创建新的 目录</li>
+<li>rmdir：删除空的目录</li>
+<li>cp：复制文件或目录</li>
+<li>rm：删除文件或者目录</li>
+<li>mv：移动文件目录，或者修改文件或者目录的名字</li>
+<li>cd .. ：回退上级目录</li>
+</ul>
+<h1 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h1><p>ls：列出列表</p>
+<p><img src="https://i.loli.net/2021/10/16/7ARdhrWQwCzm5XJ.png" alt="image-20211016190708874"></p>
+<p>ls –help:查看可用参数选项</p>
+<p><img src="https://i.loli.net/2021/10/16/YocmpBTiQUCb5Hf.png" alt="image-20211016190746059"></p>
+<p>ls -a:隐藏文件，.开头</p>
+<p><img src="https://i.loli.net/2021/10/16/YvtLnJKArk2UOE4.png" alt="image-20211016190803511"></p>
+<p>ls -l:文件的详细信息</p>
+<p><img src="https://i.loli.net/2021/10/16/bXrQACI4yEF1qjf.png" alt="image-20211016190855197"></p>
+<p>ls -al:显示所有文件和文件夹的详细信息</p>
+<p><img src="https://i.loli.net/2021/10/16/6F5Bao7elCqVhM2.png" alt="image-20211016190938071"></p>
+<ul>
+<li>第一列：权限，d开头表示目录，-开头表示文件，|开头表示链接文档</li>
+<li>第二列：文件的硬连接数或目录所含有的子目录数，即包括两部分的内容，第一部分是对文件，第二部分是对目录</li>
+<li>第三列：属于用户</li>
+<li>第四列：属于用户组</li>
+<li>第四列：文件大小</li>
+</ul>
+<p>相关权限：</p>
+<ul>
+<li>r：可读</li>
+<li>w：可以写</li>
+<li>x：可以执行</li>
+<li>-：没有权限</li>
+</ul>
+<blockquote>
+<p>权限按照-区分，第一部分，是属于用户的权限，第二部分是用户组的权限，第三部分是其他用户的权限。</p>
+</blockquote>
+<h2 id="ll-相当于ls-l"><a href="#ll-相当于ls-l" class="headerlink" title="ll(相当于ls -l)"></a>ll(相当于ls -l)</h2><p>是Long Listing format的缩写，列出当前位置文件及文件夹的明细列表，包括隐藏文件</p>
+<h1 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h1><p>显示当前文件的所在目录</p>
+<p><img src="https://i.loli.net/2021/10/16/hfz9gTw7Nv4kFxV.png" alt="image-20211016191125878"></p>
+<p>pwd -P 和pwd效果一样</p>
+<h1 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h1><p>cd (相对路径和绝对路径)</p>
+<blockquote>
+<p>相对路径：相对于当前目录</p>
+</blockquote>
+<blockquote>
+<p>绝对路径：从根目录开始</p>
+</blockquote>
+<ul>
+<li>cd ~:切换到工作目录</li>
+<li>cd .. :切换到上一级目录【.表示当前目录，..表示上一级目录】</li>
+<li>cd ../..:切换到当前目录的上两层目录</li>
+<li>cd -：切换到上一次所在的目录</li>
+<li>cd /:切换到系统根目录</li>
+<li>cd /usr:切换到usr目录</li>
+</ul>
+<p>cd ..:返回到上级目录</p>
+<p><img src="https://i.loli.net/2021/10/16/tyhRSqZ7rceibHx.png" alt="image-20211016191302579"></p>
+<h1 id="mkdir"><a href="#mkdir" class="headerlink" title="mkdir"></a>mkdir</h1><p>是make directory的缩写，创建目录（文件夹）</p>
+<p>语法：mkdir (选项) 文件夹名字</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir love</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pic.imgdb.cn/item/616ab4ba2ab3f51d91ae014e.jpg"></p>
+<p>在centos的可视化界面中查看</p>
+<p><img src="https://pic.imgdb.cn/item/616ab6472ab3f51d91af3570.jpg"></p>
+<p>mkdir -p hello/word :创建多级目录，创建父级目录不存在的文件夹，递归创建目录。（创建多级目录）</p>
+<p><img src="https://i.loli.net/2021/10/16/ybqm9QhWkJgMVdB.png" alt="image-20211016192536599"></p>
+<p><img src="https://pic.imgdb.cn/item/616ab8b92ab3f51d91b0f518.jpg"></p>
+<blockquote>
+<p>系统中加粗的就是文件夹，没有后缀；带有后缀的，未加粗的就是文件</p>
+</blockquote>
+<h1 id="rmdir"><a href="#rmdir" class="headerlink" title="rmdir"></a>rmdir</h1><p>删除空的目录</p>
+<p>语法：rmdir 目录名字</p>
+<p><img src="https://i.loli.net/2021/10/16/hey43M5jXlfmIAg.png" alt="image-20211016193709229"></p>
+<p>rmdir -p 目录名字：删除多级目录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rmdir -p hello/word</span><br></pre></td></tr></table></figure>
+
+<p>先删除word，如果删除了word后，hello也是空的，则删除hello</p>
+<h1 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h1><p>创建文件</p>
+<p>语法：touch 文件名</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch yxqz.txt</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/10/16/P1HWJaYpgti6cVd.png" alt="image-20211016194041557"></p>
+<h1 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h1><p>删除命令</p>
+<blockquote>
+<p>使用rm命令删除的文件不能恢复</p>
+</blockquote>
+<p>语法：rm (选项)  文件或者目录</p>
+<p>rm –help：查看更多选项</p>
+<p><img src="https://i.loli.net/2021/10/16/wIqEYzgWeHD9Z5B.png" alt="image-20211016193847020"></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm yxqz.txt</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/10/16/3QLsl2Ka5zREYDT.png" alt="image-20211016194130286"></p>
+<p>rm -r 目录名字：删除目录,recursive递归删除，删除目录及目录下所有文件，非空也可以删除</p>
+<p>rm -f:force强制删除</p>
+<p>rm -rf:强制删除任何文件</p>
+<p>rm -rf  *：强制删除当前目录下的所有文件</p>
+<p>rm world*：删除以world开头的文件</p>
+<p>rm *.txt：删除以.txt后缀的文件</p>
+<blockquote>
+<p>这里注意，如果在当前文件夹目录下。使用rm -rf用绝对路径删除当前文件夹（所在目录）的时候，会删除当前目录上一级里所有的文件，也就是当前所在目录相对的所有文件都会被删除</p>
+</blockquote>
+<h1 id="cp"><a href="#cp" class="headerlink" title="cp"></a>cp</h1><p>是copy的缩写，复制文件的命令</p>
+<p>语法：cp（选项） 数据源  目的地</p>
+<p>cp –help:查看选项参数</p>
+<p><img src="https://i.loli.net/2021/10/16/y1mUqraFNALtjPl.png" alt="image-20211016194501462"></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp yxqz.txt hello/word</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/10/16/Yw2KnDPrzlaCyhJ.png" alt="image-20211016194546745"></p>
+<p>数据源的位置可以是相对路径也可以是绝对路径，这里的数据源只能是文件</p>
+<p>cp -r  数据源/* 目标位置：拷贝文件夹所有文件到指定的位置，recursive递归赋值，如果给出的源文件是一个目录文件，此时将复制该目录下所有的子目录和文件。例如：cp -ai ./dir1./dir2</p>
+<p>将demo中的所有文件，拷贝到hello目录下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -r demo/* hello</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pic.imgdb.cn/item/616abd692ab3f51d91b45bd3.jpg"></p>
+<ul>
+<li>-a：选项all通常在复制目录的时候使用，它保留链接、文件属性、并复制目录下的所有内容</li>
+<li>-f：force强制覆盖，覆盖已经存在的目标文件而不给出提示</li>
+<li>-i：-i和-f相反，在覆盖目标文件之前给出提示，要求用户是否确认覆盖，回答y才会执行覆盖</li>
+</ul>
+<h1 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h1><p>移动文件或者文件夹，改数据名字，mv是move的缩写，剪切文件或者将文件改名</p>
+<p>语法：mv （选项） 数据 目的地</p>
+<p>mv –help:查看可以选择的选项</p>
+<p><img src="https://i.loli.net/2021/10/16/o6uyJUEsDV18TXC.png" alt="image-20211016195555239"></p>
+<p>将demo目录下的所有数据移动到hello目录下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv demo/* hello</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>mv 数据文件名 目标文件名：实现改名</li>
+<li>mv 数据文件 目标目录：将文件移动到目录</li>
+<li>mv 数据目录 目标目录：目录已经存在，则将数据目录移动到目标目录下，目录不存在则修改数据目录名称</li>
+<li>mv 数据目录，文件：报错</li>
+</ul>
+<h1 id="修改用户组和属性组"><a href="#修改用户组和属性组" class="headerlink" title="修改用户组和属性组"></a>修改用户组和属性组</h1><blockquote>
+<p>需要在root权限进行</p>
+</blockquote>
+<h2 id="chgrp"><a href="#chgrp" class="headerlink" title="chgrp"></a>chgrp</h2><p>语法chgrp（参数） （所属群组）（文件或者目录）</p>
+<p>修改yxqz文件的属性组</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chgrp root yxqz.txt</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/10/16/SHoVexaBkOG36mb.png" alt="image-20211016200808431"></p>
+<p>-v：带有提示</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chgrp -v yxqz yxqz.txt</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/10/16/aH9ZbUxAQlhqFJY.png" alt="image-20211016200927541"></p>
+<h2 id="chown"><a href="#chown" class="headerlink" title="chown"></a>chown</h2><ul>
+<li>更改用户主，</li>
+<li>更改用户组的属性组</li>
+</ul>
+<p>语法：chown  所属群组 文件名字</p>
+<p>-R：指定目录以及子目录下的所有文件</p>
+<p>修改demo的所有者为root</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown root demo</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/10/16/sRc3pjfgAr76BXI.png" alt="image-20211016201150552"></p>
+<p>修改hello目录的所有者和属性组都是root</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown -v root:root hello</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/10/16/LTEUJStVCQjBvH5.png" alt="image-20211016201646239"></p>
+<p>修改hello目录下的所有文件的所有者和属性组都是root</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown -R -v root:root hello</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/10/16/g6zdL43pUHc8OI9.png" alt="image-20211016201912996"></p>
+<h1 id="修改权限"><a href="#修改权限" class="headerlink" title="修改权限"></a>修改权限</h1><p>chmod：修改所属用户主，所属用户组，其他用户权限</p>
+<p>查看可以使用的参数选项：chmod –help</p>
+<p><img src="https://i.loli.net/2021/10/16/lRbqPx28S97AiOf.png" alt="image-20211016202446646"></p>
+<p>常用的依旧是-R：对当前目录下的以及里面的所有数据进行相同的设置</p>
+<p>修改方式：数字和符号</p>
+<h2 id="数字方式"><a href="#数字方式" class="headerlink" title="数字方式"></a>数字方式</h2><ul>
+<li>r（4）：可读</li>
+<li>w（2）：可以写</li>
+<li>x（1）：可以执行</li>
+<li>-（0）：没有权限</li>
+</ul>
+<p>rwx:4+2+1=7</p>
+<blockquote>
+<p>不能使用重复的数字进行运算：比如6=4+2则是rw，不能是2+2+2即www</p>
+</blockquote>
+<p>语法：chmod （参数） 数字权限 目标文件或者目录</p>
+<p>设置demo目录中的所有文件，所属者可读可写可执行，用户组可读可写可执行，其他的没有权限操作</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod -R 770 demo</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/10/16/creVOl5hbaU3upI.png" alt="image-20211016202642466"></p>
+<h2 id="符号方式"><a href="#符号方式" class="headerlink" title="符号方式"></a>符号方式</h2><ul>
+<li>usr ：属于者的权限，简写u</li>
+<li>group：用户组的权限，简写g</li>
+<li>others：其他用户的权限，简写o</li>
+</ul>
+<p>符号权限：</p>
+<ul>
+<li>+：添加权限</li>
+<li>-：去掉权限</li>
+<li>=：设置权限</li>
+</ul>
+<p>设置hello目录中的所有文件，所属者可读，用户组可读，其他的保持默认权限</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod -R u=rwx,g=rwx hello</span><br></pre></td></tr></table></figure>
+
+<p>不设置，则就是保持默认，比如这里的其他o，没有设置权限，那么还是和之前的权限一样。</p>
+<p><img src="https://i.loli.net/2021/10/16/2thr1HuaKsBQUJg.png" alt="image-20211016203247152"></p>
+<p>设置hello目录中的所有文件的权限全部设置成可读可写和执行</p>
+<p>a：all的意思</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod -R a=rwx hello</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pic.imgdb.cn/item/616ac71b2ab3f51d91bbd354.jpg"></p>
+<p>去掉hello目录中的所有文件的其他用户可读可写可执行权限</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod -R o-rwx hello</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pic.imgdb.cn/item/616ac7a92ab3f51d91bc5d9f.jpg"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">小余</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://gh.yxqz.top/2022/01/15/5.%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86/">http://gh.yxqz.top/2022/01/15/5.%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://gh.yxqz.top" target="_blank">小余博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/01/15/6.%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info"></div></div></a></div><div class="next-post pull-right"><a href="/2022/01/15/4.%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info"></div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">小余</div><div class="author-info__description">我爱吃鱼香茄子</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="toc-number">1.</span> <span class="toc-text">目录常用的命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ls"><span class="toc-number">2.</span> <span class="toc-text">ls</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ll-%E7%9B%B8%E5%BD%93%E4%BA%8Els-l"><span class="toc-number">2.1.</span> <span class="toc-text">ll(相当于ls -l)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pwd"><span class="toc-number">3.</span> <span class="toc-text">pwd</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cd"><span class="toc-number">4.</span> <span class="toc-text">cd</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mkdir"><span class="toc-number">5.</span> <span class="toc-text">mkdir</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#rmdir"><span class="toc-number">6.</span> <span class="toc-text">rmdir</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#touch"><span class="toc-number">7.</span> <span class="toc-text">touch</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#rm"><span class="toc-number">8.</span> <span class="toc-text">rm</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cp"><span class="toc-number">9.</span> <span class="toc-text">cp</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mv"><span class="toc-number">10.</span> <span class="toc-text">mv</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7%E7%BB%84%E5%92%8C%E5%B1%9E%E6%80%A7%E7%BB%84"><span class="toc-number">11.</span> <span class="toc-text">修改用户组和属性组</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#chgrp"><span class="toc-number">11.1.</span> <span class="toc-text">chgrp</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#chown"><span class="toc-number">11.2.</span> <span class="toc-text">chown</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%9D%83%E9%99%90"><span class="toc-number">12.</span> <span class="toc-text">修改权限</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E6%96%B9%E5%BC%8F"><span class="toc-number">12.1.</span> <span class="toc-text">数字方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%A6%E5%8F%B7%E6%96%B9%E5%BC%8F"><span class="toc-number">12.2.</span> <span class="toc-text">符号方式</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/01/15/9.shell/" title="无题"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2022/01/15/9.shell/" title="无题">无题</a><time datetime="2022-01-15T14:06:05.754Z" title="发表于 2022-01-15 22:06:05">2022-01-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/15/8.%E7%BD%91%E7%BB%9C%E5%92%8C%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86/" title="无题"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2022/01/15/8.%E7%BD%91%E7%BB%9C%E5%92%8C%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86/" title="无题">无题</a><time datetime="2022-01-15T14:06:05.749Z" title="发表于 2022-01-15 22:06:05">2022-01-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/15/7.%E5%A4%87%E4%BB%BD%E5%8E%8B%E7%BC%A9/" title="无题"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2022/01/15/7.%E5%A4%87%E4%BB%BD%E5%8E%8B%E7%BC%A9/" title="无题">无题</a><time datetime="2022-01-15T14:06:05.744Z" title="发表于 2022-01-15 22:06:05">2022-01-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/15/6.%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/" title="无题"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2022/01/15/6.%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/" title="无题">无题</a><time datetime="2022-01-15T14:06:05.740Z" title="发表于 2022-01-15 22:06:05">2022-01-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/15/5.%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86/" title="无题"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2022/01/15/5.%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86/" title="无题">无题</a><time datetime="2022-01-15T14:06:05.736Z" title="发表于 2022-01-15 22:06:05">2022-01-15</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 小余</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
